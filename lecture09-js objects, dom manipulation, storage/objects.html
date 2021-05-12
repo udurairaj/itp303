@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Objects</title>
+	<style>
+		#people {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>People</h1>
+	<div id="people">
+	</div>
+
+	<script>
+
+		// 1. literal syntax
+
+		// in JS, you do NOT have to create a class before creating an object - you can create objects right away
+		let person = {
+			name: "Tommy Trojan",
+			age: 21,
+			hobbies: [
+				"Taking photos",
+				"Posing",
+				"Guarging USC"
+			],
+			phone: {
+				cell: "123-123-1234",
+				work: "555-555-5555"
+			},
+			greet: function(yourName) {
+				console.log("Hi! " + yourName);
+			}
+		}
+
+		console.log(person.name);
+		console.log(person.hobbies);
+		console.log(person.hobbies[0]);
+		console.log(person.phone);
+		console.log(person.phone.cell);
+		person.greet("Nayeon");
+
+		person.name = "Mark Redekopp";
+		console.log(person.name);
+
+
+
+		// 2. Constructor function syntax
+		function Person(fullName, age) {
+			this.name = fullName;
+			this.age = age;
+
+			this.getName = function() {
+				console.log(this.name);
+				return this.name;
+			}
+		}
+
+		let joe = new Person("Joe Smith", 22);
+		let jim = new Person("Jimmy Kimmel", 35);
+
+		console.log(joe.name);
+		jim.getName();
+
+		let kim = new Person("Kimmy Jimmel", 35);
+
+
+
+		// 3. New Class method
+		class NewPerson {
+			constructor(name, age) {
+				this.name = name;
+				this.age = age;
+			}
+
+			greet() {
+				console.log ("Hi, my name is " + this.name);
+
+				// new syntax of same thing
+				// console.log(`Hi, my name is ${this.name}`);
+			}
+		}
+
+		let bim = new NewPerson("Bimmy Mimmel", 90);
+		bim.greet();
+
+
+		let peopleList = [];
+		peopleList.push(joe, jim, kim);
+
+		for (let i = 0; i < peopleList.length; i++) {
+			let pElement = document.createElement("p");
+			pElement.innerHTML = peopleList[i].name + " - " + peopleList[i].age;
+
+			// new syntax of same thing
+			// pElement.innerHTML = `${peopleList[i].name} - ${peopleList[i].age}`
+
+			document.querySelector("#people").appendChild(pElement);
+		}
+		console.log(peopleList);
+
+
+		// New loops (for...in, for...of)
+
+		// for each loop in JS
+		for (let person of peopleList) {
+			console.log(person);
+		}
+
+		// for...in loop will loop through the properties (keys)
+		for (let property in person) {
+			console.log(property);
+		}
+
+	</script>
+</body>
+</html>

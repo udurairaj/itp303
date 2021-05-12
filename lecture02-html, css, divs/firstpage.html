@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<!-- this is an HTML comment -->
+	<head>
+		<!-- define character set for this file - so accents, symbols, etc show up on browser -->
+		<meta charset="UTF-8"> 
+		<title></title>
+		<!-- Internal stylesheet aka Internal CSS -->
+		<style type="text/css">
+			/* this is a CSS comment */
+			h1 {
+				color: blue;
+				font-size: 50px;
+			}
+			h2 {
+				color: green;
+				font-size: 40px;
+			}
+			img {
+				/* only edit either width OR height of image - editing both will distort the image */
+				width: 300px;
+			}
+			.blue-text {
+				/* can use hex codes instead of color names for more precise color */
+				color: blue;
+			}
+			#main-image {
+				width: 100px;
+			}
+			#header {
+				background-color: yellow;
+				/* text-align can position text within the div */
+				text-align: center;
+			}
+			#header h1 {
+				/* margin can get rid of weird spacing since h1 comes with spacing and div gives spacing */
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+			#biology {
+				background-color: pink;
+				/* width alters the width of the entire div/box */
+				width: 500px;
+				/* padding creates space INSIDE the div */
+				padding-left: 10px;
+				padding-bottom: 10px;
+				/* margin creates space OUTSIDE the div */
+				margin-left: 50px;
+				/* margin can also center the entire div if it is the only div in that row */
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<!-- body tag represents the browser - anything within will be shown in the browser -->
+	<body>
+
+		<!-- div tag creates a box/section/divider -->
+		<div id="header">
+			<!-- HTML ignores whitespace -->
+
+			<!-- heading tags like h1 are good for page titles - makes text large, bold, and comes with some spacing on top and bottom -->
+			<h1>All About Pikachu</h1>
+		</div>
+		
+		<div id="biology">
+		
+			<h2>Biology</h2>
+
+			<!-- 
+				-img tag for inserting image
+				-don't close image tags!! - slash at end instead
+				-src attribute: where image is coming from
+				-alt attribute: alternative text; description of image - will only show text if image link doesn't work, also for accessibility
+
+				2 ways to define the source of an image:
+
+					1. absolute path (first image)
+						-search image, copy image address, paste into src
+						-easy to add this way
+						-disadvantage: owner can take this image down
+
+					2. relative path (second image)
+						-save image on your computer and use that
+						-no risk of losing image
+						-be careful of file path - if not in same folder, can use ../"image" etc to navigate
+						-typically make a folder called images
+			-->
+			<img src="https://www.nme.com/wp-content/uploads/2016/12/POTY_Pikachu_3.jpg" alt="Excited Pikachu!" />
+
+			<img id="main-image" src="images/pikachu.jpg" alt="Sleepy Pikachu!"/>
+
+			<!-- p tag for paragraphs - create space around each paragraph -->
+
+			<!-- strong tag for bold, em tag for italics -->
+
+			<p class="blue-text">Pikachu is a short, chubby rodent <strong>Pokémon</strong>. It is covered in <em>yellow</em> fur with two horizontal brown stripes on its back. It has a small mouth, long, pointed ears with black tips, brown eyes, and the two red circles on its cheeks contain pouches for electricity storage. It has short forearms with five fingers on each paw, and its feet each have three toes. At the base of its lightning bolt-shaped tail is a patch of brown fur. A female will have a V-shaped notch at the end of its tail, which looks like the top of a heart. It is classified as quadruped, but it has been known to stand and walk on its hind legs.</p>
+
+			<p>The anime has shown that wild Pikachu live in groups in forested areas. Pikachu communicates amongst themselves using squeaks and tail-shaking as friendly gestures. Electricity can be used to receive and send messages with each other, as well as other Electric Pokémon species. It raises its tail to check its surroundings and is occasionally struck by lightning in this position. When groups grow, they can inadvertently cause lightning storms. Pikachu is found foraging for berries it roasts with electricity to make them tender enough to eat. A sure sign that Pikachu inhabits a location is patches of burnt grass. It has been observed eating and sometimes destroying telephone poles, wires, and other electronic equipment.</p>
+		</div>
+
+		<h2>Facts</h2>
+
+		<!-- ul tag for bulleted list (unordered list) -->
+		<!-- ol tag for numbered list (ordered list) -->
+		<!-- li tag for list item -->
+		<ol>
+			<li>evolves to Raichu</li>
+			<li>electric type pokemon</li>
+			<li>is yellow</li>
+		</ol>
+
+		<!-- 
+			-a tag to create links (anchor tag)
+			-link (href attribute)included in opening tag
+			-target attribute for where to open link (_blank is new tab) 
+		-->
+		<a href="https://www.google.com" target="_blank">Click me</a> to learn more about Pokemon!
+
+
+	</body>
+</html>

@@ -1,0 +1,39 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+#nav {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+}
+#nav a {
+	background-color: #8352ff;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	box-sizing: border-box;
+	width: 25%;
+	font-size: 18px;
+}
+#nav a:hover {
+	background-color: #ccb8ff;
+	color: black;
+}
+
+@media (max-width: 991px) {
+
+	#nav a {
+		width: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+
+	#nav a {
+		width: 100%;
+	}
+}

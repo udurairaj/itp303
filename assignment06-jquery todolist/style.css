@@ -1,0 +1,109 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Covered By Your Grace', cursive;
+	background-color: #ffe6ee;
+}
+
+ul {
+	padding: 0px;
+}
+
+h1 {
+	font-size: 40px;
+	padding: 0px;
+	margin: 0px;
+}
+
+.item {
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+
+.item:hover {
+	background-color: #ffccdd;
+}
+
+.todo {
+	font-size: 20px;
+}
+
+.space {
+	padding-right: 10px;
+}
+
+.expand {
+	font-size: 25px;
+	float: right;
+	display: inline-block;
+	padding: 15px;
+}
+
+#weather {
+	text-align: center;
+	border: 1px solid black;
+	margin-left: 15%;
+	margin-right: 15%;
+	font-size: 20px;
+	background-color: #ffadc9;
+}
+
+#city {
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 20px;
+	background-color: #ffadc9;
+}
+
+#todolist {
+	width: 500px;
+	margin-top: 150px;
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 10px 7px 10px #bf6583;
+}
+
+#top-bar {
+	background-color: #ffadc9;
+	margin: 0px;
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+#head {
+	display: inline-block;
+}
+
+#form {
+	text-align: center;
+	width: 490px;
+}
+
+#input {
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 20px;
+	width: 100%;
+	padding: 5px;
+	border-top-style: hidden;
+	border-bottom-style: hidden;
+	border-left-style: hidden;
+	border-right-style: hidden;
+	border-bottom: 1px solid black;
+}
+
+#list {
+	padding: 0px;
+	margin: 0px;
+	background-color: white;
+}
+
+@media (max-width: 768px) {
+	#weather {
+		margin-left: 0px;
+		margin-right: 0px;
+		font-size: 15px;
+	}
+	#city {
+		font-size: 15px;
+	}
+}

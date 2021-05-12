@@ -1,0 +1,30 @@
+html, body {
+	font-family: 'Cormorant Garamond', serif;
+}
+img {
+	width: 100%;
+}
+.navbar-custom {
+	background-color: #354a12;
+}
+.header-custom {
+	background-image: url("images/variety.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	height: 350px;
+}
+.border-bottom-custom {
+	border-bottom: 1px solid #354a12;
+}
+.thumbnail-custom {
+	width: 50%
+}
+.bg-custom {
+	background-color: #b8c66a;
+	height: 100%;
+}
+.btn-custom {
+	background-color: #354a12;
+}

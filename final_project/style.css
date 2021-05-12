@@ -1,0 +1,298 @@
+html, body {
+	font-family: 'Cormorant Garamond', serif;
+	background-color: #0d3b66;
+}
+
+body {
+	margin-bottom: 200px;
+	font-size: 20px;
+	color: white;
+}
+
+.navbar-custom {
+	background-color: #0d3b66;
+	font-size: 17px;
+}
+
+.title-header-custom {
+	background-color: #0d3b66;
+}
+
+.header-custom {
+	background-image: url("images/home-spread.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	height: 350px;
+}
+
+.footer-custom {
+	color: white;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #0d3b66;
+	font-size: 15px;
+}
+
+.container {
+	max-width: 1250px;
+}
+
+.notecard {
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.link {
+	color: white;
+}
+
+.link:hover {
+	color: red;
+}
+
+.recipe-title {
+	border-bottom: 1px solid red;
+	padding-top: 4px;
+	background-color: white;
+}
+
+.recipe-title a {
+	color: black;
+	text-decoration: none;
+}
+
+.recipe-info {
+	align-items: center;
+	justify-content: center;
+	font-size: 18px;
+	background-color: white;
+}
+
+.recipe-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.recipe-img-det {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+
+.recipe-url-div {
+	width: 100%;
+}
+
+.recipe-url {
+	border-bottom: 1px solid #00aaff;
+	margin: 0px;
+	background-color: white;
+}
+
+.recipe-url a {
+	word-wrap: break-word;
+}
+
+.recipe-tags {
+	border-bottom: 1px solid #00aaff;
+	margin: 0px;
+	background-color: white;
+}
+
+.recipe-comments {
+	border-bottom: 1px solid #00aaff;
+	margin: 0px;
+	background-color: white;
+}
+
+.edit-delete-btns {
+	padding-top: 6px;
+	text-align: right;
+}
+
+.recipebox {
+	position: fixed;
+	bottom: 20px;
+	right: 0px;
+	left: 0px;
+	background-color: #0d3b66;
+}
+.recipebox img {
+	width: 20%;
+	max-width: 125px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search-ing {
+	text-align: center;
+}
+
+#search-ing-label {
+	padding-left: 15px;
+	font-size: 20px;
+}
+
+#search-ing-input {
+	width: 80%;
+	max-width: 1250px;
+}
+
+#search {
+	text-align: center;
+}
+
+#search-label {
+	padding-left: 15px;
+	font-size: 20px;
+}
+
+#search-input {
+	width: 80%;
+	max-width: 1250px;
+}
+
+#num-results {
+	padding-left: 5px;
+	padding-top: 10px;
+}
+
+.btn-custom {
+	color: #d4d4d4;
+	border: 1px solid #d4d4d4;
+}
+
+.btn-custom:hover {
+	background-color: #b0b0b0;
+	border: 1px solid #b0b0b0;
+}
+
+.back-btn {
+	text-align: left;
+	padding-top: 6px;
+}
+
+.back-btn-custom {
+	color: black;
+	background-color: #b0b0b0;
+	border: 1px solid #b0b0b0;
+}
+
+.reg-log-custom {
+	color: white;
+}
+
+.reg-log-custom:hover {
+	color: red;
+}
+
+.add-btn {
+	padding-top: 15px;
+}
+
+#recipe-grid {
+	max-width: 1250px;
+	position: relative;
+}
+
+.typeradio {
+	padding-right: 20px;
+}
+
+.loading-animation {
+	position: absolute;
+	right: 70px;
+	top: 140px;
+}
+
+.loading {
+	text-align: center;
+	visibility: hidden;
+}
+
+.recipebox-animated {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: #0d3b66;
+}
+
+.animate {
+	animation-name: move;
+	animation-duration: 3s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+}
+
+.recipebox-animated img {
+	width: 100%;
+	max-width: 125px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@keyframes move {
+	0% {
+		transform: scale(1) translate(0px, 0px) rotate(0deg);
+	}
+	25% {
+		transform: scale(1) translate(150px, -75px) rotate(360deg)
+	}
+	50% {
+		transform: scale(1) translate(0px, 200px) rotate(0deg)
+	}
+	75% {
+		transform: scale(1) translate(-150px, -75px) rotate(-360deg)
+	}
+}
+
+/* tablet */
+@media (min-width: 768px) {
+	#search-ing-input {
+		width: 88%;
+	}
+
+	#search-ing-label {
+		padding-left: 28px;
+	}
+
+	#search-input {
+		width: 88%;
+	}
+
+	#search-label {
+		padding-left: 28px;
+	}
+
+	.details-container {
+		max-width: 900px;
+	}
+
+	.details-container img {
+		width: 35%;
+	}
+}
+
+/* desktop/laptop/etc*/
+@media (min-width: 992px) {
+	#search-ing-input {
+		width: 90%;
+	}
+	#search-input {
+		width: 90%;
+	}
+}
+

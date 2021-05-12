@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Coachella</title>
+	<style type="text/css">
+		html, body {
+			/* 
+			   -margin: creates space outside of element
+			   -padding: creates space inside of element
+
+			   - USE INSPECT ELEMENT TO FIND SOURCE OF WEIRD SPACING
+			 */
+			/* removes extra margin spacing added by all html tags and body tag specifically */
+			margin: 0px;
+			/* removes extra padding */
+			padding: 0px;
+		}
+		#header {
+			background-color: #f5dfc0;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		#header h1 {
+			/* to get rid of h1 default margin, must be in h1, not header, since margin is outside of div */
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		#about {
+			background-color: pink;
+			/* when there are multiple divs in row, use margin-left and margin-right on auto in the parent div - must have width match size of inner divs or else it won't center perfectly */
+			margin-left: auto;
+			margin-right: auto;
+			width: 710px;
+		}
+		#about-pic {
+			background-color: lightgreen;
+			width: 400px;
+			/* floats do two things:
+			
+			   1. a floated element gets pushed as far to the left/right as possible
+
+			   2. side effect: any element that comes after the floated element tries to wrap around the floated element;
+
+			   --> use clear to remedy this side effect
+			*/
+			float: left;
+		}
+		#about-text {
+			background-color: pink;
+			width: 300px;
+			float: left;
+			/* when you add padding, the width of the div increases - make sure it fits within the parent div*/
+			padding-left: 10px;
+			/* try not to set heights on anything - will not adjust with the text if you change the text - a trick is to change the color of the parent div for the illusion of divs lining up */
+		}
+		.clearfloat {
+			/* clear stops any floats from continuing */
+			clear: both;
+		}
+		#artists {
+			background-color: skyblue;
+			margin-left: auto;
+			margin-right: auto;
+			/* (1px + 10px + 15px + 200px + 15px + 10px + 1px) * 3 */
+			width: 756px;
+		}
+		.artist-box {
+			background-color: #fef587;
+			width: 200px;
+			float: left;
+			/* margin and padding are shorthand for on all sides*/
+			margin: 10px;
+			padding: 15px;
+			border: 1px solid black;
+
+		}
+		/* the image inside .artist-box could go outside of the box, so we have to prevent that */
+		.artist-box img {
+			width: 200px;
+		}
+		#footer {
+			background-color: black;
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>Coachella</h1>
+	</div>
+
+	<div id="about">
+		<div id="about-pic">
+			<img src="images/coachella.png" alt="A palm tree" />
+		</div>
+		<div id="about-text">
+			<p>The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.</p>
+		</div>
+		<!-- STOP FLOATING here - end of the row -->
+		<!-- this is an empty div -->
+		<div class="clearfloat"></div>
+	</div>
+
+	<div id="artists">
+		<h2>Artists</h2>
+
+		<div class="artist-box">
+			<img src="images/ariana.jpg" alt="Ariana Grande" />
+			<h3>Ariana Grande</h3>
+		</div>
+
+		<div class="artist-box">
+			<img src="images/gambino.jpg" alt="Childish Gambino" />
+			<h3>Childish Gambino</h3>
+		</div>
+
+		<div class="artist-box">
+			<img src="images/blackpink.jpg" alt="Black Pink" />
+			<h3>Black Pink</h3>
+		</div>
+
+		<!-- STOP FLOATING -->
+		<div class="clearfloat"></div>
+	</div>
+
+	<div id="footer">
+		Copyright 2021.
+	</div>
+
+</body>
+</html>

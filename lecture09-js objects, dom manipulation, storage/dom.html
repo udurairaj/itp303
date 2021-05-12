@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Manipulation and JS Objects</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<style>
+		.red {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-4">
+			<h1 class="col-12">Create Elements on the fly</h1>
+			<div class="col-12 mt-4">
+				<form id="simple-form">
+					<div class="form-row">
+						<div class="col-12 mt-2 col-sm-3 mt-sm-0">
+							<label for="input" class="sr-only">Add a paragraph</label>
+							<input type="text" class="form-control" id="input" placeholder="Add some text">
+						</div> 
+
+						<div class="col-12 mt-2 col-sm-auto mt-sm-0">
+							<button role="button" type="submit" class="btn btn-primary">Add</button>
+							<button role="button" type="button" class="btn btn-danger" id="btn-delete">Delete All</button>
+						</div> <!-- .col -->
+					</div>
+				</form>
+			</div>
+			<div class="col-12 mt-4">
+				<div id="paragraphs">
+					<p class="red">I am a paragraph</p>
+					<p class="red">I am a second paragraph</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<script>
+
+	// advantage of using onsubmit - will trigger both when the user presses "enter" and clicks on submit button
+	document.querySelector("#simple-form").onsubmit = function(event) {
+		event.preventDefault();
+		let userInput = document.querySelector("#input").value.trim();
+		console.log(userInput);
+
+		if (userInput.length == 0) {
+			alert ("Please enter text");
+		}
+		else {
+			let pElement = document.createElement("p");
+			pElement.innerHTML = userInput;
+			pElement.classList.add("red");
+			let parent = document.querySelector("#paragraphs");
+			parent.appendChild(pElement);
+			document.querySelector("#input").value = "";
+		}
+	}
+
+	document.querySelector("#btn-delete").onclick = function() {
+		let paragraphs = document.querySelector("#paragraphs");
+
+		while (paragraphs.hasChildNodes()) {
+			paragraphs.removeChild(paragraphs.lastChild);
+		}
+
+		// can also do it this way:
+		// paragraphs.innerHTML = "";
+	}
+
+</script>
+
+</body>
+</html>
